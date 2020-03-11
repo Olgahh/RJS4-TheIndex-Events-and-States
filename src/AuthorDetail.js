@@ -5,11 +5,11 @@ function AuthorDetail(props) {
   return (
     <div className="author col-xs-10">
       <div>
-        <h3>{author.first_name + " " + author.last_name}</h3>
+        <h3>I SHOULD BE AN AUTHOR NAME</h3>
         <img
-          src={author.imageUrl}
+          src="http://catchingfire.ca/wp-content/uploads/2016/09/question-mark-square-01.png"
           className="img-thumbnail"
-          alt={author.first_name + " " + author.last_name}
+          alt="I SHOULD BE AN AUTHOR NAME TOO"
         />
       </div>
       <table className="mt-3 table">
@@ -22,9 +22,18 @@ function AuthorDetail(props) {
         </thead>
         <tbody>
           <tr>
-            <td>{author.books.title}</td>
-            <td>{author.first_name + " " + author.last_name}</td>
-            <td>{author.books.color}</td>
+            <td>I SHOULD BE A BOOK NAME</td>
+            <td>I SHOULD BE THE AUTHOR OF THIS BOOK</td>
+            <td>
+              <button className="btn" style={{ backgroundColor: "blue" }} />
+            </td>
+          </tr>
+          <tr>
+            <td>I SHOULD BE ANOTHER BOOK NAME</td>
+            <td>I SHOULD BE A STRING OF THIS OTHER BOOK'S AUTHORS</td>
+            <td>
+              <button className="btn" style={{ backgroundColor: "red" }} />
+            </td>
           </tr>
         </tbody>
       </table>

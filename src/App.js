@@ -6,6 +6,7 @@ import authors from "./data";
 // Components
 import Sidebar from "./Sidebar";
 import AuthorList from "./AuthorList";
+import AuthorDetail from "./AuthorDetail";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         </div>
         <div className="content col-10">
           <AuthorList authors={authors} />
+          <AuthorDetail authors={authors} />
         </div>
       </div>
     </div>
