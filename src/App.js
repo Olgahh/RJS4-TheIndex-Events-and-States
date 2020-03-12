@@ -25,12 +25,14 @@ class App extends Component {
     this.setState({ currentAuthor: null });
   };
   render() {
+    // if (this.state.currentAuthor) not null go to list
     return (
       <div id="app" className="container-fluid">
         <div className="row">
           <div className="col-2">
             <Sidebar unselectAuthor={this.unselectAuthor} />
           </div>
+          {/*{(if(true) _____? do(___):(if not do) (____)}*/}
           <div className="content col-10">{this.getDetail()}</div>
         </div>
       </div>

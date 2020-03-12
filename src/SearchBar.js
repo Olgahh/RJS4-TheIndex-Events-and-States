@@ -2,9 +2,9 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
-function SearchBar() {
+function SearchBar(props) {
   const handleChange = event => {
-    console.log(event.target.value);
+    props.filter(event.target.value);
   };
 
   return (
