@@ -2,6 +2,7 @@ import React from "react";
 
 // Components
 import AuthorCard from "./AuthorCard";
+import SearchBar from "./SearchBar";
 
 const AuthorList = props => {
   const authorCards = props.authors.map(author => (
@@ -14,6 +15,7 @@ const AuthorList = props => {
 
   return (
     <div className="authors">
+      <SearchBar />
       <h3>Authors</h3>
       <div className="row">{authorCards}</div>
     </div>

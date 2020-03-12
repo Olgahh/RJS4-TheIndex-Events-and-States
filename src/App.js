@@ -7,6 +7,7 @@ import authors from "./data";
 import Sidebar from "./Sidebar";
 import AuthorList from "./AuthorList";
 import AuthorDetail from "./AuthorDetail";
+// import SearchBar from "./SearchBar";
 
 class App extends Component {
   state = {
