@@ -20,13 +20,14 @@ class App extends Component {
       return <AuthorDetail author={this.state.currentAuthor} />;
     return <AuthorList authors={authors} selectAuthor={this.selectAuthor} />;
   };
-
+  unselectAuthor = () => {
+    this.setState({ currentAuthor: null });
   render() {
     return (
       <div id="app" className="container-fluid">
         <div className="row">
           <div className="col-2">
-            <Sidebar />
+            <Sidebar unselectAuthor={this.unselectAuthor} />
           </div>
           <div className="content col-10">{this.getDetail()}</div>
         </div>
