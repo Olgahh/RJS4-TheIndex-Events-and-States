@@ -16,11 +16,9 @@ class App extends Component {
     this.setState({ currentAuthor: author });
   };
   getDetail = () => {
-    if (this.state.currentAuthor) {
+    if (this.state.currentAuthor)
       return <AuthorDetail author={this.state.currentAuthor} />;
-    } else {
-      return <AuthorList authors={authors} selectAuthor={this.selectAuthor} />;
-    }
+    return <AuthorList authors={authors} selectAuthor={this.selectAuthor} />;
   };
 
   render() {
@@ -30,10 +28,7 @@ class App extends Component {
           <div className="col-2">
             <Sidebar />
           </div>
-          <div className="content col-10">
-            <AuthorList authors={authors} />
-            <AuthorDetail authors={authors} />
-          </div>
+          <div className="content col-10">{this.getDetail()}</div>
         </div>
       </div>
     );

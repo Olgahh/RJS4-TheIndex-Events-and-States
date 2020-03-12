@@ -1,18 +1,14 @@
 import React from "react";
 
 function AuthorDetail(props) {
-  //   const author = props.author;
-  //   const authorName = `${author.first_name} ${author.last_name}`;
+  const author = props.author;
+  const authorName = `${author.first_name} ${author.last_name}`;
 
   return (
     <div className="author col-xs-10">
       <div>
-        <h3>I SHOULD BE AN AUTHOR NAME</h3>
-        <img
-          src="http://catchingfire.ca/wp-content/uploads/2016/09/question-mark-square-01.png"
-          className="img-thumbnail"
-          alt="I SHOULD BE AN AUTHOR NAME TOO"
-        />
+        <h3>{authorName}</h3>
+        <img src={author.imageUrl} className="img-thumbnail" alt={authorName} />
       </div>
       <table className="mt-3 table">
         <thead>
@@ -24,17 +20,13 @@ function AuthorDetail(props) {
         </thead>
         <tbody>
           <tr>
-            <td>I SHOULD BE A BOOK NAME</td>
-            <td>I SHOULD BE THE AUTHOR OF THIS BOOK</td>
+            <td>{author.books.title}</td>
+            <td>{authorName}</td>
             <td>
-              <button className="btn" style={{ backgroundColor: "blue" }} />
-            </td>
-          </tr>
-          <tr>
-            <td>I SHOULD BE ANOTHER BOOK NAME</td>
-            <td>I SHOULD BE A STRING OF THIS OTHER BOOK'S AUTHORS</td>
-            <td>
-              <button className="btn" style={{ backgroundColor: "red" }} />
+              <button
+                className="btn"
+                style={{ backgroundColor: author.books.color }}
+              />
             </td>
           </tr>
         </tbody>
