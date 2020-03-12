@@ -22,6 +22,7 @@ class App extends Component {
   };
   unselectAuthor = () => {
     this.setState({ currentAuthor: null });
+  };
   render() {
     return (
       <div id="app" className="container-fluid">
