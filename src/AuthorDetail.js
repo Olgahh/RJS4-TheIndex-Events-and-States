@@ -1,7 +1,9 @@
 import React from "react";
 
 function AuthorDetail(props) {
-  const author = props.author;
+  //   const author = props.author;
+  //   const authorName = `${author.first_name} ${author.last_name}`;
+
   return (
     <div className="author col-xs-10">
       <div>
